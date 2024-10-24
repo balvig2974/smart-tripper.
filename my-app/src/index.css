@@ -1,0 +1,88 @@
+/* index.css */
+body.light-mode {
+    background-color: rgb(210, 208, 208);
+    color: black;
+  }
+  
+  body.dark-mode {
+    background-color: rgb(39, 38, 38);
+    color: white;
+  }
+  
+  .accordion-item {
+    border: 1px solid transparent;
+  }
+  
+  .accordion-button {
+    background-color: transparent;
+    color: inherit; /* Inherit color based on the body */
+  }
+  
+  body.dark-mode .accordion-button {
+    background-color: #444; /* Dark background for dark mode */
+    color: white; /* Text color for dark mode */
+  }
+  
+  body.light-mode .accordion-button {
+    background-color: #f8f9fa; /* Light background for light mode */
+    color: black; /* Text color for light mode */
+  }
+  
+  .accordion-button:not(.collapsed) {
+    background-color: #007bff; /* Active button color */
+    color: white;
+  }
+  
+  .accordion-body {
+    background-color: inherit; /* Inherit background color from parent */
+  }
+  
+  body.dark-mode .accordion-body {
+    background-color: #555; /* Dark background for accordion body */
+    color: white; /* Text color for accordion body */
+  }
+  
+  body.light-mode .accordion-body {
+    background-color: white; /* Light background for accordion body */
+    color: black; /* Text color for accordion body */
+  }
+  
+
+  
+.navbar {
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar.light-mode {
+    background-color: #f8f9fa; /* Light mode navbar color */
+  }
+  
+  .navbar.dark-mode {
+    background-color: #343a40; /* Dark mode navbar color */
+    color: white; /* Text color for dark mode */
+  }
+  
+  .nav-link {
+    color: inherit; /* Ensure links inherit color from navbar */
+  }
+  
+  .nav-link:hover {
+    text-decoration: underline; /* Optional: change hover effect */
+  }
+
+  /* index.css */
+.alert {
+    margin: 1rem; /* Add some margin for spacing */
+  }
+  
+  .alert-light {
+    background-color: #f70d11; /* Light background for light mode */
+    color: #212529; /* Dark text */
+  }
+  
+  .alert-dark {
+    background-color: #721515; /* Dark background for dark mode */
+    color: #ffffff; /* Light text */
+  }
+  
+  
