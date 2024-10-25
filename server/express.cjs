@@ -3,7 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose = require('mongoose');
-
+const path = require('path');
 const app = express();
 const PORT = 5000;
 
@@ -49,6 +49,14 @@ const PzemData = mongoose.model('PzemData', pzemSchema);
 
 app.get('/response', (req, res) => {
   res.json({ message: "bala", show: false });
+});
+
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, '../my-app/dist')));
+
+// Handle all requests by returning the React app
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../my-app/dist/index.html'));
 });
 
 app.post('/alert', async (req, res) => {

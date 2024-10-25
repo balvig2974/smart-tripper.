@@ -77,13 +77,13 @@ export const Search = (props) => {
                 </div>
                 <div className="overflow-auto border p-3" style={{
                     backgroundColor: "grey",
-                    width: '450px',
+                    width: '750px',
                     maxHeight: '300px'
                 }}>
                     {insertdata.length > 0 ? (
                         insertdata.map((trip, index) => (
                             <div key={trip.id || index}>
-                                {trip._id + "  " + trip.time + "  " + trip.date}
+                                {trip._id + "    " + trip.time + "    " + trip.date+"     "+trip.voltage+"     "+trip.current}
                             </div>
                         ))
                     ) : (

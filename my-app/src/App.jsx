@@ -1,10 +1,5 @@
- import React, { useState } from 'react';
- import { BrowserRouter, Routes, Route } from 'react-router-dom';
- import { Navbar } from '../public/Navbar';
+ import React from 'react';
  import { Home } from '../public/Home';
-import { About } from '../public/about';
-import { TripEvent } from '../public/trip_event'; 
-import { Search } from '../public/search';
 
 const App = () => {
   return (
