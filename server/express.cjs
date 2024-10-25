@@ -52,11 +52,11 @@ app.get('/response', (req, res) => {
 });
 
 // Serve static files from the React app
-app.use(express.static(path.join(__dirname, '../my-app/dist')));
+app.use(express.static(path.join(__dirname, '../my-app/src')));
 
 // Handle all requests by returning the React app
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../my-app/dist/index.html'));
+  res.sendFile(path.join(__dirname, '../my-app/index.html'));
 });
 
 app.post('/alert', async (req, res) => {

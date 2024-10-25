@@ -5,8 +5,9 @@
   "devDependencies": {
     "gh-pages": "^6.2.0"
   },
-  "scripts": {
-    "start": "node server/index.js",
-    "build": "cd my-app && npm install && npm run build"
-  }
+ "scripts": {
+  "start": "npm run build && node express.cjs",
+  "build": "cd my-app && npm install && npm run build"
+}
+
 }
