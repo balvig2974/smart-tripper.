@@ -15,8 +15,7 @@
   "main": "server/express.js",
 
   "scripts": {
-    "build": "cd my-app && npm install && npm run build",
-    "start": "npm run build && node server/express.cjs"
+    "build": "cd my-app && npm install && npm run build"
 
   }
 }
