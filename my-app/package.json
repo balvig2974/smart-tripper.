@@ -8,6 +8,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "start": "npm run build && node server/express.cjs",
     "predeploy": "npm run build",
    "deploy": "gh-pages -d build",
     "lint": "eslint .",
