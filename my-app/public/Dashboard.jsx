@@ -28,16 +28,7 @@ const GaugeMeter = ({ value, maxValue }) => {
 const Dashboard = () => {
   const maxGaugeValue = 300;
   const [lineChartData1, setLineChartData1] = useState([]);
-  const [lineChartData2, setLineChartData2] = useState([    { time: '2023-10-24 10:00', current: 10 },
-    { time: '2023-10-24 10:05', current: 11 },
-    { time: '2023-10-24 10:10', current: 12 },
-    { time: '2023-10-24 10:15', current: 11.5 },
-    { time: '2023-10-24 10:20', current: 13 },
-    { time: '2023-10-24 10:25', current: 12.8 },
-    { time: '2023-10-24 10:30', current: 14 },
-    { time: '2023-10-24 10:35', current: 15 },
-    { time: '2023-10-24 10:40', current: 14.5 },
-    { time: '2023-10-24 10:45', current: 16 },]);
+  const [lineChartData2, setLineChartData2] = useState([]);
 
   const [selectedSocket, setSelectedSocket] = useState('socket 1');
   const [selectedTripper, setSelectedTripper] = useState('tripper 1');
