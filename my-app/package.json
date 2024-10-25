@@ -9,7 +9,6 @@
     "build": "vite build",
     "preview": "vite preview",
     "start": "npm run build && node ../server/express.cjs"
-
   },
   "dependencies": {
     "axios": "^1.7.7",
