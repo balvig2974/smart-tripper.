@@ -140,16 +140,7 @@ const Dashboard = () => {
             </div>
           </Col>
 
-          <Col xs={6} className="mb-4">
-            <Row className="justify-content-center">
-              <Col xs={5} className="mx-2" style={{ backgroundColor: '#ffc107', padding: '10px', borderRadius: '8px' }}>
-                <h4 style={{ textAlign: 'center', color: '#000' }}>Power</h4>
-                <h5 style={{ textAlign: 'center', color: '#000' }}>{voltage*current} W</h5>
-              </Col>
-              
-            </Row>
-          </Col>
-
+        
         
         </Row>
       </Container>

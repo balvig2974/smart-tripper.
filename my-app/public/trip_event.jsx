@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button';
 import { ThemeContext } from './themeprovider';
 
 export const TripEvent = () => {
-  const [data, setData] = useState({});
+  const [dataval, setDataval] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [val, setVal] = useState("");
   const [currentTripKey, setCurrentTripKey] = useState("");
@@ -13,8 +13,8 @@ export const TripEvent = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/tripdetails');
-      setData(response.data);
+      const response = await axios.get('http://localhost:5000/tripdetails/data');
+      setDataval(response.data);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
@@ -28,10 +28,10 @@ export const TripEvent = () => {
 
   useEffect(() => {
     // Check for null status in the fetched data
-    if (Object.values(data).some(item => item.status === 'null')) {
+    if (Object.values(dataval).some(item => item.status === 'null')) {
       setAlertData({ message: "Trip occurred", show: true });
     }
-  }, [data]); // Run this effect whenever 'data' changes
+  }, [dataval]); // Run this effect whenever 'data' changes
 
   const handleSaveChanges = async () => {
     setShowModal(false);
@@ -50,7 +50,7 @@ export const TripEvent = () => {
     setAlertData({ ...alertData, show: false });
   };
 
-  const entries = Object.entries(data);
+  const entries = Object.entries(dataval);
 
   return (
     <>

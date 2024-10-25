@@ -47,16 +47,24 @@ const tripSchema = new mongoose.Schema({
 const Trip = mongoose.model('Trip', tripSchema);
 const PzemData = mongoose.model('PzemData', pzemSchema);
 
+
 app.get('/response', (req, res) => {
   res.json({ message: "bala", show: false });
 });
-
+app.get('/tripdetails/data', async (req, res) => {
+  try {
+    const trips = await Trip.find();
+    res.json(trips);
+  } catch (error) {
+    res.status(500).json({ error: 'Error retrieving trip details' });
+  }
+});
 // Serve static files from the React app
-app.use(express.static(path.join(__dirname, '../my-app/src')));
+app.use(express.static(path.join(__dirname, '../my-app/dist')));
 
 // Handle all requests by returning the React app
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../my-app/index.html'));
+  res.sendFile(path.join(__dirname, '../my-app/dist/index.html'));
 });
 
 app.post('/alert', async (req, res) => {
@@ -155,14 +163,6 @@ app.post('/pzem-data', async (req, res) => {
   }
 });
 
-app.get('/tripdetails', async (req, res) => {
-  try {
-    const trips = await Trip.find();
-    res.json(trips);
-  } catch (error) {
-    res.status(500).json({ error: 'Error retrieving trip details' });
-  }
-});
 
 app.post('/update-status', async (req, res) => {
   const { val, tripkey } = req.body; 

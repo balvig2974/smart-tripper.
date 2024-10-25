@@ -83,7 +83,7 @@ export const Search = (props) => {
                     {insertdata.length > 0 ? (
                         insertdata.map((trip, index) => (
                             <div key={trip.id || index}>
-                                {trip._id + "    " + trip.time + "    " + trip.date+"     "+trip.voltage+"     "+trip.current}
+                                {trip._id + "    time   :" + trip.time + "   date:   " + trip.date+"    voltage:      "+trip.voltage+"   current:       "+trip.current}
                             </div>
                         ))
                     ) : (
