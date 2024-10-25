@@ -6,7 +6,7 @@
     "gh-pages": "^6.2.0"
   },
  "scripts": {
-  "start": "npm run build && node express.cjs",
+  "start": "npm run build && node server/express.cjs",
   "build": "cd my-app && npm install && npm run build"
 }
 
