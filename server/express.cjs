@@ -7,7 +7,7 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT||5000;
 
-app.use(cors());
+app.use(cors({ origin: 'https://smart-tripper-2000.onrender.com' }));
 app.use(bodyParser.json());
 // const path = require('path');
 // app.use(express.static(path.join(__dirname, 'project', 'dist')));
