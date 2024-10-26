@@ -3,8 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "start": "cd server && npm run start",
-    "build": "cd my-app && npm install && npm run build", 
+    "start": "node server/express.cjs",
+    "build": "cd server && npm install && cd .. && cd my-app && npm install && npm run build", 
     "deploy": "gh-pages -d my-app/build"
   },
   "dependencies": {
