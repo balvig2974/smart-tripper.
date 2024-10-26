@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "scripts": {
     "start": "node server/express.cjs",
-    "build": "npm install && cd my-app && npm install && npm run build", 
+    "build": "npm install && cd my-app && npm install && npm run build",
     "deploy": "gh-pages -d my-app/build"
   },
   "dependencies": {
@@ -20,5 +20,8 @@
     "socket.io-client": "^4.7.5",
     "sort-by": "^1.2.0"
   },
-  "main": "server/express.cjs" 
+  "main": "server/express.cjs",
+  "devDependencies": {
+    "vite": "^5.4.10"
   }
+}
