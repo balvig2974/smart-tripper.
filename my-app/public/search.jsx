@@ -28,7 +28,7 @@ export const Search = (props) => {
         console.log('Selected Location:', selectedLocation);
 
         try {
-            const response = await axios.post('http://localhost:5000/api/dates', {
+            const response = await axios.post('https://smart-tripper-2000.onrender.com/api/dates', {
                 date: formattedDate,
                 location: selectedLocation, // Pass the selected location
             });
