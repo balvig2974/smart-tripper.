@@ -13,7 +13,7 @@ export const TripEvent = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/tripdetails/data');
+      const response = await axios.get('https://smart-tripper-2000.onrender.com/tripdetails/data');
       setDataval(response.data);
     } catch (error) {
       console.error("Error fetching data:", error);
