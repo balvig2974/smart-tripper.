@@ -4,7 +4,7 @@ import App from './App.jsx'
 import './index.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Navbar  } from '/public/Navbar.jsx';
-import { About } from '/public/about';
+import { About } from '/public/About';
 import { TripEvent } from '/public/trip_event'; 
 import { Search } from '/public/search';
 import { ThemeProvider } from '/public/themeprovider.jsx';
