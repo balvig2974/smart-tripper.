@@ -44,7 +44,7 @@ const Dashboard = () => {
     };
 
     try {
-      const response = await axios.post('http://localhost:5000/disp_pzem-data', data);
+      const response = await axios.post('https://smart-tripper-2000.onrender.com/disp_pzem-data', data);
       setLineChartData1(response.data.voltages);
       setLineChartData2(response.data.currents);
       setCurrent(response.data.current);
