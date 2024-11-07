@@ -43,15 +43,15 @@ export const Search = (props) => {
         <div style={{
             backgroundColor: props.bodymode,
             width: '100vw',
-            height: '100vh'
+            height: '100vh',
+            padding:'20px'
         }}>
             <br /><br />
             <center>
                 <div style={{
                     backgroundColor: props.bodymode,
                     width: '400px',
-                    height: '50px',
-                    padding:'20px'
+                    height: '50px'
                 }}>
                     <form className="d-flex" onSubmit={disp}>
                         <input
